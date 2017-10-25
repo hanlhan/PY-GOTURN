@@ -1,10 +1,11 @@
-IMAGENET_FOLDER='/media/nrupatunga/LAPTOP_BACKUP/Datasets/ILSVRC2014'
-ALOV_FOLDER='/media/nrupatunga/LAPTOP_BACKUP/Datasets/ALOV'
-INIT_CAFFEMODEL='./nets/tracker_init.caffemodel'
+#!/usr/bin/env bash
+IMAGENET_FOLDER='/home/dobio/data/ILSVRC2014'
+ALOV_FOLDER='/home/dobio/data/ALOV'
+INIT_CAFFEMODEL='/home/dobio/data/tracker.caffemodel'
 TRACKER_PROTO='./nets/tracker.prototxt'
 SOLVER_PROTO='./nets/solver.prototxt'
 
-python -m goturn.train.train \
+python3 -m goturn.train.train \
 --imagenet $IMAGENET_FOLDER \
 --alov $ALOV_FOLDER \
 --init_caffemodel $INIT_CAFFEMODEL \

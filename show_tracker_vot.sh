@@ -1,8 +1,9 @@
-DEPLOY_PROTO='./nets/tracker.prototxt'		 
-CAFFE_MODEL='./nets/_iter_100000.caffemodel'		
-TEST_DATA_PATH='/media/nrupatunga/STUDIES&SOFTWARES/Work-2017/DeepLearning/Datasets/VOT/vot2014'		
+#!/usr/bin/env bash
+DEPLOY_PROTO='/home/dobio/PY-GOTURN/nets/tracker.prototxt'
+CAFFE_MODEL='/home/dobio/PY-GOTURN/nets/dump_model/dump_model_iter_450000.caffemodel'
+TEST_DATA_PATH='/home/dobio/data/vot2014'
 
-python -m goturn.test.show_tracker_vot \
+python3 -m goturn.test.show_tracker_vot \
 	--p $DEPLOY_PROTO \
 	--m $CAFFE_MODEL \
 	--i $TEST_DATA_PATH \
