@@ -3,6 +3,7 @@
 # Name: Nrupatunga
 # Description: Test file for showing the tracker output
 
+import os
 import argparse
 import setproctitle
 from ..logger.logger import setup_logger
@@ -14,12 +15,17 @@ from ..tracker.tracker_manager import tracker_manager
 setproctitle.setproctitle('SHOW_TRACKER_VOT')
 logger = setup_logger(logfile=None)
 
-ap = argparse.ArgumentParser()
-ap.add_argument("-p", "--prototxt", required = True, help = "Path to the prototxt")
-ap.add_argument("-m", "--model", required = True, help = "Path to the model")
-ap.add_argument("-v", "--input", required = True, help = "Path to the vot directory")
-ap.add_argument("-g", "--gpuID", required = True, help = "gpu to use")
-args = vars(ap.parse_args())
+# ap = argparse.ArgumentParser()
+# ap.add_argument("-p", "--prototxt", required = True, help = "Path to the prototxt")
+# ap.add_argument("-m", "--model", required = True, help = "Path to the model")
+# ap.add_argument("-v", "--input", required = True, help = "Path to the vot directory")
+# ap.add_argument("-g", "--gpuID", required = True, help = "gpu to use")
+# args = vars(ap.parse_args())
+
+args = dict(prototxt=os.environ['DEPLOY_PROTO'],
+            model=os.environ['CAFFE_MODEL'],
+            input=os.environ['TEST_DATA_PATH'],
+            gpuID=0)
 
 do_train = False
 objRegressor = regressor(args['prototxt'], args['model'], args['gpuID'], 1, do_train, logger)
