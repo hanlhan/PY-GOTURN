@@ -12,8 +12,6 @@ from ..loader.loader_alov import loader_alov
 from ..train.example_generator import example_generator
 from ..network.regressor_train import regressor_train
 from ..tracker.tracker_trainer import tracker_trainer
-import sys
-sys.path.insert(0, '/usr/local/caffe/python')
 import os
 import caffe
 import numpy as np

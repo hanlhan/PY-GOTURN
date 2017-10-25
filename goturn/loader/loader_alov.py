@@ -3,16 +3,10 @@
 # Name: Nrupatunga
 # Description: loading Alov dataset
 
-import sys
-# sys.path.append('../logger/')
-# sys.path.append('../helper/')
 import os
 import glob
-from .annotation import annotation
 from .video import video
 from .video import frame
-import xml.etree.ElementTree as ET
-from ..logger.logger import setup_logger
 from ..helper.BoundingBox import BoundingBox
 
 
@@ -123,10 +117,3 @@ class loader_alov:
         logger.info('Total annotated video frames: {}'.format(num_annotations))
 
         return videos
-
-        
-if '__main__' == __name__:
-    logger = setup_logger(logfile=None)
-    objLoaderAlov = loader_alov('/media/nrupatunga/data/datasets/VOT-extract/images/', '/media/nrupatunga/data/datasets/VOT-extract/gt/', logger)
-    objLoaderAlov.loaderAlov()
-    objLoaderAlov.get_videos()

@@ -3,14 +3,8 @@
 # Name: Nrupatunga
 # Description: Basic regressor function implemented
 
-from __future__ import print_function
-import os
-import glob
 import numpy as np
-import sys
 import cv2
-from ..helper import config
-sys.path.insert(0, config.CAFFE_PATH)
 import caffe
 
 class regressor:

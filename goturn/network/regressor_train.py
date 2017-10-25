@@ -3,11 +3,8 @@
 # Name: Nrupatunga
 # Description: 
 
-import sys
 import numpy as np
-from regressor import regressor
-from ..helper import config
-sys.path.insert(0, config.CAFFE_PATH)
+from .regressor import regressor
 import caffe
 from visdom import Visdom
 viz = Visdom()

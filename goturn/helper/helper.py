@@ -23,11 +23,7 @@ def sample_exp_two_sides(lambda_):
 
     """
 
-    pos_or_neg = random.randint(0, RAND_MAX)
-    if (pos_or_neg % 2) == 0:
-        pos_or_neg = 1
-    else:
-        pos_or_neg = -1
+    pos_or_neg = random.choice((-1, 1))
 
     rand_uniform = sample_rand_uniform()
 

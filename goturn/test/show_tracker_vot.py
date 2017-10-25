@@ -10,7 +10,6 @@ from ..network.regressor import regressor
 from ..loader.loader_vot import loader_vot
 from ..tracker.tracker import tracker
 from ..tracker.tracker_manager import tracker_manager
-from ..loader.video import video
 
 setproctitle.setproctitle('SHOW_TRACKER_VOT')
 logger = setup_logger(logfile=None)

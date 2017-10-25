@@ -3,7 +3,6 @@
 # Name: Nrupatunga
 # Description: annotations
 
-import sys
 from ..helper.BoundingBox import BoundingBox
 
 class annotation:

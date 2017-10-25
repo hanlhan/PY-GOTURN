@@ -4,7 +4,6 @@
 # Description: Image processing functions
 
 import math
-import cv2
 import numpy as np
 from ..helper.BoundingBox import BoundingBox
 

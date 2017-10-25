@@ -3,14 +3,11 @@
 # Name: Nrupatunga
 # Description: loading Imagenet dataset
 
-from __future__ import print_function
-import sys
 import os
 import cv2
 import glob
-from annotation import annotation
+from .annotation import annotation
 import xml.etree.ElementTree as ET
-from ..logger.logger import setup_logger
 from ..helper import config
 
 
@@ -154,9 +151,3 @@ class loader_imagenet:
         bbox.y2 = bbox.y2 * sc_factor_1
 
         return image, bbox
-
-
-if '__main__' == __name__:
-    logger = setup_logger(logfile=None)
-    objLoaderImgNet = loader_imagenet('/media/nrupatunga/data/datasets/ILSVRC2014/ILSVRC2014_DET_train/', '/media/nrupatunga/data/datasets/ILSVRC2014/ILSVRC2014_DET_bbox_train/', logger)
-    dict_list_of_annotations = objLoaderImgNet.loaderImageNetDet()

@@ -3,11 +3,8 @@
 # Name: Nrupatunga
 # Description: Basic regressor function implemented
 
-from __future__ import print_function
 from ..helper.image_proc import cropPadImage
 from ..helper.BoundingBox import BoundingBox
-import os
-import numpy as np
 
 
 class tracker:
