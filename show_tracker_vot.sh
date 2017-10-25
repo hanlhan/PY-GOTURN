@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 DEPLOY_PROTO='/home/dobio/PY-GOTURN/nets/tracker.prototxt'
-CAFFE_MODEL='/home/dobio/PY-GOTURN/nets/dump_model/dump_model_iter_450000.caffemodel'
+CAFFE_MODEL='/home/dobio/data/dump_model/dump_model_iter_450000.caffemodel'
 TEST_DATA_PATH='/home/dobio/data/vot2014'
 
 python3 -m goturn.test.show_tracker_vot \

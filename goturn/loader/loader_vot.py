@@ -6,7 +6,7 @@
 from __future__ import print_function
 import os
 from ..helper.BoundingBox import BoundingBox
-from video import video
+from .video import video
 import glob
 
 
